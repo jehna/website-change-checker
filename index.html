@@ -45,17 +45,24 @@
         <div class="well" style="float: right;">
             <strong>Global actions</strong>
             <p>
-                <a href="update.php" class="btn">P&auml;ivit&auml; lista</a><br />
+                <a class="btn" id="update-list">Update list</a><br />
                 <small>(Yahoo reader)</small>
+            </p>
+            <p>
+                <a class="btn" id="add-page-to-list">Add page</a><br />
+                <small>Creates new page to list</small>
             </p>
         </div>
         <h1>Website change checker</h1>
         <table class="table table-bordered table-striped table-hover">
-            <tr>
-                <th>Website name</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Website name</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="pages-tbody">
             <!-- <?php foreach($sites as $filename => $site) { ?>
             <?php if( abs(strcmp(file_get_contents("/home/jehna/thejunkland.com/itala/tmp/".$filename), file_get_contents("/home/jehna/thejunkland.com/itala/tmp_recent/".$filename)) ) < 10 ) {?>
               <tr class="success">
@@ -71,6 +78,7 @@
               </tr>
             <?php } ?>
         <?php }?>-->
+            </tbody>
         </table>
     </div> <!-- /container -->
 
